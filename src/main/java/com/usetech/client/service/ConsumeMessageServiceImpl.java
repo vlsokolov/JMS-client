@@ -23,17 +23,12 @@ public class ConsumeMessageServiceImpl implements ConsumeMessageService {
     @Autowired
     private CommonConfig commonConfig;
 
-    @Autowired
-    private MessageConverter converter;
-
-    FrameBean bean = new FrameBean();
-
     @Override
-    @JmsListener(destination="ClientRequest.Topic")
+    @JmsListener(destination="ClientRequest.queue")
     public boolean receive() {
         try {
-           //   bean = (FrameBean) jmsTemplate.receiveAndConvert();
-           //   System.out.println(bean);
+           //    FrameBean bean = (FrameBean) jmsTemplate.receiveAndConvert();
+             //  System.out.println(bean);
             Message message = jmsTemplate.receive();
             System.out.println(message);
         } catch (JmsException e) {

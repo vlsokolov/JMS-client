@@ -1,12 +1,14 @@
 package com.usetech.client.bean;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
 
 /**
  * Created by User on 18.11.2016.
  */
+
 public class FrameBean implements Serializable {
 
     private static final long serialVersionUID = -5054749880970511861L;
